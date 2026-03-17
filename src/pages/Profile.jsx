@@ -5,7 +5,7 @@ import { Camera } from 'lucide-react';
 
 const Profile = () => {
   const currentUser = useAuthStore((state) => state.currentUser);
-  const logout = useAuthStore((state) => state.logout);
+
 
   if (!currentUser) return null;
 
@@ -45,18 +45,13 @@ const Profile = () => {
         </p>
 
         {/* Separator exact styling */}
-        <div className="border-t border-dashed border-[#cbcbcb] -mx-6 w-[calc(100%+3rem)] mb-auto h-0" />
+        <div className="border-b border-dashed border-[#cbcbcb] -mx-6 w-[calc(100%+3rem)] mb-auto h-0" />
         <div className="flex-1"></div>
         <div className="mt-8 mb-4">
-          <Button
-            variant="outline"
-            className="w-full h-12 border-red-500 text-red-500 hover:bg-red-50 mt-auto shadow-none font-semibold text-[16px]"
-            onClick={logout}
-          >
-            Logout
-          </Button>
         </div>
       </div>
+      <div className="border-b border-dashed border-[#cbcbcb] -mx-6 -mt-10 w-[calc(100%+3rem)] mb-auto h-0" />
+      <div className="mt-8"></div>
     </div>
   );
 };
